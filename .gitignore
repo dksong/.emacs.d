@@ -1,0 +1,6 @@
+auto-save-list
+*~
+*.swp
+ac-comphist.dat
+elpa
+.DS_Store
