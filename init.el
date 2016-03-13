@@ -23,6 +23,7 @@
 (add-to-list 'default-frame-alist '(left . 10))
 (add-to-list 'default-frame-alist '(width . 150))
 (require 'xcscope)
+(setq cscope-option-do-not-update-database t)
 (setq cscope-index-recursively t)
 (cscope-setup)
 (require 'multiple-cursors)
