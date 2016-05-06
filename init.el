@@ -1,3 +1,21 @@
+;; Set path to dependencies
+(setq site-lisp-dir
+      (expand-file-name "site-lisp" user-emacs-directory))
+
+;; Set up load path
+(add-to-list 'load-path site-lisp-dir)
+
+;; Add external projects to load path
+(dolist (project (directory-files site-lisp-dir t "\\w+"))
+  (when (file-directory-p project)
+    (add-to-list 'load-path project)))
+
+(autoload 'markdown-mode "markdown-mode"
+          "Major mode for editing Markdown files" t)
+(add-to-list 'auto-mode-alist '("\\.markdown\\'" . markdown-mode))
+(add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
+(add-to-list 'auto-mode-alist '("\\.text\\'" . markdown-mode))
+
 (setq-default indent-tabs-mode nil)
 (setq tab-width 2)
 (setq column-number-mode t)
