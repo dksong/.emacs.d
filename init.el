@@ -13,6 +13,9 @@
   (when (file-directory-p project)
     (add-to-list 'load-path project)))
 
+(autoload 'rust-mode "rust-mode" nil t)
+(add-to-list 'auto-mode-alist '("\\.rs\\'" . rust-mode))
+
 (autoload 'markdown-mode "markdown-mode"
           "Major mode for editing Markdown files" t)
 (add-to-list 'auto-mode-alist '("\\.markdown\\'" . markdown-mode))
@@ -41,9 +44,9 @@
 (setq solarized-high-contrast-mode-line t)
 (enable-theme 'solarized)
 (set-frame-font "Menlo 14" nil t)
-(add-to-list 'default-frame-alist '(height . 78))
-(add-to-list 'default-frame-alist '(left . 10))
-(add-to-list 'default-frame-alist '(width . 150))
+;(add-to-list 'default-frame-alist '(height . 78))
+;(add-to-list 'default-frame-alist '(left . 10))
+;(add-to-list 'default-frame-alist '(width . 150))
 (require 'xcscope)
 (setq cscope-option-do-not-update-database t)
 (setq cscope-index-recursively t)

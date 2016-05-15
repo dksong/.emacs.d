@@ -5,3 +5,6 @@
 	path = site-lisp/markdown-mode
 	url = git@github.com:jrblevin/markdown-mode.git
 	branch = stable
+[submodule "site-lisp/rust-mode"]
+	path = site-lisp/rust-mode
+	url = git@github.com:rust-lang/rust-mode.git
