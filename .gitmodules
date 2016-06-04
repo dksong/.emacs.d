@@ -8,3 +8,6 @@
 [submodule "site-lisp/rust-mode"]
 	path = site-lisp/rust-mode
 	url = git@github.com:rust-lang/rust-mode.git
+[submodule "site-lisp/xcscope"]
+	path = site-lisp/xcscope
+	url = https://github.com/dkogan/xcscope.el.git
