@@ -35,6 +35,7 @@
   ;; For important compatibility libraries like cl-lib
   (add-to-list 'package-archives '("gnu" . "http://elpa.gnu.org/packages/")))
 (package-initialize) ;; You might already have this line
+
 (require 'auto-complete)
 (global-auto-complete-mode t)
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/emacs-color-theme-solarized")
@@ -47,10 +48,12 @@
 ;(add-to-list 'default-frame-alist '(height . 78))
 ;(add-to-list 'default-frame-alist '(left . 10))
 ;(add-to-list 'default-frame-alist '(width . 150))
+
 (require 'xcscope)
 (setq cscope-option-do-not-update-database t)
 (setq cscope-index-recursively t)
 (cscope-setup)
+
 (require 'multiple-cursors)
 (when (fboundp 'windmove-default-keybindings)
   (windmove-default-keybindings))
@@ -58,6 +61,9 @@
 (global-set-key (kbd "C-c <right>") 'windmove-right)
 (global-set-key (kbd "C-c <up>") 'windmove-up)
 (global-set-key (kbd "C-c <down>") 'windmove-down)
+
+(require 'llvm-mode)
+(require 'tablegen-mode)
 
 (defun toggle-frame-split ()
   "If the frame is split vertically, split it horizontally or vice versa.
