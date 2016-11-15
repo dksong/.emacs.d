@@ -65,6 +65,14 @@
 (require 'llvm-mode)
 (require 'tablegen-mode)
 
+(add-to-list 'load-path "~/.emacs.d/site-lisp/magit/lisp")
+(require 'magit)
+
+(with-eval-after-load 'info
+  (info-initialize)
+  (add-to-list 'Info-directory-list
+	       "~/.emacs.d/site-lisp/magit/Documentation/"))
+
 (defun toggle-frame-split ()
   "If the frame is split vertically, split it horizontally or vice versa.
 Assumes that the frame is only split into two."

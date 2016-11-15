@@ -11,3 +11,6 @@
 [submodule "site-lisp/xcscope"]
 	path = site-lisp/xcscope
 	url = https://github.com/dkogan/xcscope.el.git
+[submodule "site-lisp/magit"]
+	path = site-lisp/magit
+	url = https://github.com/magit/magit.git
