@@ -87,3 +87,5 @@ Assumes that the frame is only split into two."
 
 ;; I don't use the default binding of 'C-x 5', so use toggle-frame-split instead
 (global-set-key (kbd "C-x 5") 'toggle-frame-split)
+
+(global-set-key (kbd "C-c ;") 'comment-or-uncomment-region)
