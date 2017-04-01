@@ -88,4 +88,16 @@ Assumes that the frame is only split into two."
 ;; I don't use the default binding of 'C-x 5', so use toggle-frame-split instead
 (global-set-key (kbd "C-x 5") 'toggle-frame-split)
 
+(setq TeX-PDF-mode t)
+(when (eq system-type 'darwin)
+  (setenv "PATH" (concat (getenv "PATH") ":/Library/Tex/texbin"))
+  (setq TeX-view-program-selection
+  '((output-dvi "DVI Viewer")
+    (output-pdf "PDF Viewer")
+    (output-html "HTML Viewer")))
+  (setq TeX-view-program-list
+  '(("DVI Viewer" "open %o")
+    ("PDF Viewer" "open -a TeXShop %o")
+    ("HTML Viewer" "open %o"))))
+
 (global-set-key (kbd "C-c ;") 'comment-or-uncomment-region)
