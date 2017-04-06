@@ -72,6 +72,11 @@
   (info-initialize)
   (add-to-list 'Info-directory-list
 	       "~/.emacs.d/site-lisp/magit/Documentation/"))
+(custom-set-faces
+ '(magit-diff-added ((t (:background "black" :foreground "green3"))))
+ '(magit-diff-added-highlight ((t (:background "black" :foreground "green3"))))
+ '(magit-diff-removed ((t (:background "black" :foreground "red3"))))
+ '(magit-diff-removed-highlight ((t (:background "black" :foreground "red3")))))
 
 (defun toggle-frame-split ()
   "If the frame is split vertically, split it horizontally or vice versa.
