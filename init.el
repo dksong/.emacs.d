@@ -13,9 +13,14 @@
   (when (file-directory-p project)
     (add-to-list 'load-path project)))
 
+;; Rust
 (autoload 'rust-mode "rust-mode" nil t)
 (add-to-list 'auto-mode-alist '("\\.rs\\'" . rust-mode))
 
+;; Go
+(require 'go-mode-autoloads)
+
+;; Markdown
 (autoload 'markdown-mode "markdown-mode"
           "Major mode for editing Markdown files" t)
 (add-to-list 'auto-mode-alist '("\\.markdown\\'" . markdown-mode))
