@@ -28,6 +28,9 @@
 (add-to-list 'auto-mode-alist '("\\.text\\'" . markdown-mode))
 (setq markdown-command "pandoc -f markdown -t html -s --mathjax --highlight-style=pygments")
 
+(require 'neotree)
+(global-set-key (kbd "C-x 8") 'neotree-toggle)
+
 (setq-default indent-tabs-mode nil)
 (setq tab-width 2)
 (setq column-number-mode t)
