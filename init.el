@@ -20,6 +20,11 @@
 ;; Go
 (require 'go-mode-autoloads)
 
+;; CMake
+(autoload 'cmake-mode "cmake-mode" nil t)
+(add-to-list 'auto-mode-alist '("CMakeLists\\.txt\\'" . cmake-mode))
+(add-to-list 'auto-mode-alist '("\\.cmake\\'" . cmake-mode))
+
 ;; Markdown
 (autoload 'markdown-mode "markdown-mode"
           "Major mode for editing Markdown files" t)
@@ -69,6 +74,7 @@
 (global-set-key (kbd "C-c <right>") 'windmove-right)
 (global-set-key (kbd "C-c <up>") 'windmove-up)
 (global-set-key (kbd "C-c <down>") 'windmove-down)
+(global-set-key (kbd "C-x ,") 'previous-multiframe-window)
 
 (require 'llvm-mode)
 (require 'tablegen-mode)
