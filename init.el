@@ -147,4 +147,8 @@ Assumes that the frame is only split into two."
     ("PDF Viewer" "open -a TeXShop %o")
     ("HTML Viewer" "open %o"))))
 
+(eval-after-load "tex"
+  '(add-to-list 'TeX-command-list '("Make" "make" TeX-run-compile nil t) t))
+(add-hook 'TeX-mode-hook '(lambda () (setq TeX-command-default "Make")))
+
 (global-set-key (kbd "C-c ;") 'comment-or-uncomment-region)
