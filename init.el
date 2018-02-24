@@ -66,6 +66,7 @@
 (setq-default show-trailing-whitespace t)
 (setq-default indent-tabs-mode nil)
 (setq tab-width 2)
+(setq-default fill-column 80)
 (setq column-number-mode t)
 (setenv "MANWIDTH" "72")
 (global-linum-mode 1)
