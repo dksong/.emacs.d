@@ -18,7 +18,7 @@
 (add-to-list 'auto-mode-alist '("\\.rs\\'" . rust-mode))
 
 ;; Go
-(require 'go-mode-autoloads)
+(require 'go-mode)
 
 ;; CMake
 (autoload 'cmake-mode "cmake-mode" nil t)
@@ -59,9 +59,6 @@
   (c-set-style "linux-tabs-only"))
 
 ;(add-to-list 'auto-mode-alist '("\.c$" . linux-c-mode))
-
-(require 'neotree)
-(global-set-key (kbd "C-x 8") 'neotree-toggle)
 
 (setq-default show-trailing-whitespace t)
 (setq-default indent-tabs-mode nil)
