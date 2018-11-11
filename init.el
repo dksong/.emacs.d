@@ -112,6 +112,9 @@
   (info-initialize)
   (add-to-list 'Info-directory-list
 	       "~/.emacs.d/site-lisp/magit/Documentation/"))
+
+(require 'virtualenvwrapper)
+
 (custom-set-faces
  '(magit-diff-added ((t (:background "black" :foreground "green3"))))
  '(magit-diff-added-highlight ((t (:background "black" :foreground "green3"))))

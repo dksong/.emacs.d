@@ -44,3 +44,9 @@
 [submodule "site-lisp/treepy"]
 	path = site-lisp/treepy
 	url = https://github.com/volrath/treepy.el
+[submodule "site-lisp/virtualenvwrapper"]
+	path = site-lisp/virtualenvwrapper
+	url = https://github.com/porterjamesj/virtualenvwrapper.el.git
+[submodule "site-lisp/s"]
+	path = site-lisp/s
+	url = https://github.com/magnars/s.el.git
